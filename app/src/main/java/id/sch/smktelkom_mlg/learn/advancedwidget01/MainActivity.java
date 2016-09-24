@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             arJumlah[i] = i + 1;
         }
-        ArrayAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, arJumlah);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spJumlah.setAdapter(adapter);
 
         llAnak = (LinearLayout) findViewById(R.id.linearLayoutAnak);
